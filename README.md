@@ -6,11 +6,12 @@ Same is used in the Main_Test_Code.py
 
 The code is integrated with the UI in UiServer.py file
 
-# Execution:
-  Open python executable terminal and run 
-       py UiServer.py
-  this will open a browser in localhost - http://127.0.0.1:5000/
+# Execution
+Open python executable terminal and run 
+--- py UiServer.py
+this will open a browser in localhost - http://127.0.0.1:5000/
    
+# Result
 Images before and after disaster can be added using the option given in the UI and click on "Process" button.
 On clicking "Process" it will take you to the page with following results:
 
