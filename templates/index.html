@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Disaster Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://necolas.github.io/normalize.css/3.0.2/normalize.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css'> -->
+  <link rel='stylesheet' href='https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='landingpagecss.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='loading.css') }}">
+</head>
+<body>
+<div class="loading">Loading&#8230;</div>
+<nav id="global-nav" class="nav">
+  <div class="container">
+    <div class="pull-left"><h1 class="site-title">Disaster Management</div>
+    <div class="pull-right">
+      <ul class="navbar-nav">
+        <li>
+          <a href="#">Paper</a>
+        </li>
+        <li>
+          <a href="#">Code</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="hero-text">
+      <div id="about-container">
+      <h1 class="style-3" >About</h1>
+      </div>
+      <p>Whenever a disaster occurs, users in social media, sensors, cameras, satellites, 
+        and the like generate vast amounts of data. Emergency responders and victims use this 
+        data for situational awareness, decision-making, and safe evacuations. However, making
+        sense of the generated information under time-bound situations is a challenging task as 
+        amount of data can be significant, and there is a need for intelligent systems to analyze,
+        process, and visualize it. With recent advancements in Artificial Intelligence (AI), numerous
+        researchers have begun exploring AI, machine learning (ML), and deep learning (DL) techniques
+        for big data analytics in managing disasters efficiently.
+        <main class="page-content">
+          <div class="card">
+            <div class="content">
+              <h2 class="title">Disaster 1</h2>
+              <p class="copy">Tsunamis are sometimes referred to as tidal waves.
+                This once-popular term derives from the most common appearance of a tsunami, 
+                which is that of an extraordinarily high tidal bore.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">Disaster 2</h2>
+              <p class="copy">An earthquake (also known as a quake, tremor or temblor) is the shaking of the surface of the Earth
+                 resulting from a sudden release of energy in the Earth's lithosphere that creates seismic waves.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">Disaster 3</h2>
+              <p class="copy">The strong rotating winds of a tropical cyclone are a result of the conservation of angular
+                 momentum imparted by the Earth's rotation as air flows inwards toward the axis of rotation. 
+                As a result, they rarely form within 5° of the equator. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title">Disaster 4</h2>
+              <p class="copy">Volcanic eruptions happen when lava and gas are discharged from a volcanic vent. 
+                The most common consequences of this are population movements as 
+                large numbers of people are often forced to flee the moving lava flow.</p>
+            </div>
+          </div>
+        </main>
+    </div>
+  </div>
+</div>
+
+<div class="content-section">
+  <div class="container">
+    <div class="content-text">
+      <h1>Upload Images</h1>
+      <form action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+      <div class="wrapper">
+
+        <div class="box">
+          <div class="js--image-preview"></div>
+          <div class="upload-options">
+            <label>
+              <input name="pre-disaster" type="file" class="image-upload" accept="image/*" />
+            </label>
+          </div>
+        </div>
+      
+        <div class="box">
+          <div class="js--image-preview"></div>
+          <div class="upload-options">
+            <label>
+              <input name="post-disaster" type="file" class="image-upload" accept="image/*" />
+            </label>
+          </div>
+        </div>
+
+    </div>
+    <div class="buttonContainer">
+      <input class="subbutton" onclick="showSpinner()" value="Process!" type = "submit"/>
+    </div>
+    </form>
+  </div>
+</div>  
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="{{ url_for('static', filename='landingpagescript.js') }}"></script>
+  <script  src="{{ url_for('static', filename='uploadscript.js') }}"></script>
+
+</body>
+</html>

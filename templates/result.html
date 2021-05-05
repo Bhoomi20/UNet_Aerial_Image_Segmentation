@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Disaster Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://necolas.github.io/normalize.css/3.0.2/normalize.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css'> -->
+  <link rel='stylesheet' href='https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='ResultStyle.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='image-style.css') }}">
+</head>
+<body>
+<div class="loading">Loading&#8230;</div>
+<nav id="global-nav" class="nav">
+  <div class="container">
+    <div class="pull-left"><h1 class="site-title">Disaster Management</div>
+    <div class="pull-right">
+      <ul class="navbar-nav">
+        <li>
+          <a href="#">Paper</a>
+        </li>
+        <li>
+          <a href="#">Code</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class='o-c'>
+  <div class='c-crds'>
+    <div class='c-crd'>
+      <a class='c-crd__wrap' href='#'>
+        <div class='c-crd__img'>
+          <img src="{{input_image_path}}"> 
+        </div>
+        <div class='c-crd__btm'>
+          Input Images : Before Disaster & After Disaster
+        </div>
+      </a>
+    </div>
+    <div class='c-crd'>
+      <a class='c-crd__wrap' href='#'>
+        <div class='c-crd__img'>
+          <img src="{{Enhance_Image_path}}"> 
+        </div>
+        <div class='c-crd__btm'>
+          Enhanced Image : Before Disaster & After Disaster
+        </div>
+      </a>
+    </div>
+    <div class='c-crd'>
+      <div class='c-crd__wrap'>
+        <div class='c-crd__img'>
+          <img src="{{segmented_Image_path}}"> 
+        </div>
+        <div class='c-crd__btm'>
+          Segmented Image : Before Disaster & After Disaster
+        </div>
+      </div>
+    </div>
+    <div class='c-crd'>
+      <div class='c-crd__wrap'>
+        <div class='c-crd__img'>
+          <img src="{{ mark_damage_region_path }}"> 
+        </div>
+        <div class='c-crd__btm'>
+          Final Result : Total Percent of Damage in segmented Region {{ value }} %
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="{{ url_for('static', filename='ResultScript.js') }}"></script>
+
+</body>
+</html>
