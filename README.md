@@ -7,8 +7,8 @@ Same is used in the Main_Test_Code.py
 The code is integrated with the UI in UiServer.py file
 
 # Execution
-Open python executable terminal and run 
---- py UiServer.py
+Open python executable terminal and then execute the below command.
+-- py UiServer.py
 this will open a browser in localhost - http://127.0.0.1:5000/
    
 # Result
