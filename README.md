@@ -8,15 +8,16 @@ The code is integrated with the UI in UiServer.py file
 
 # Execution
 Open python executable terminal and then execute the below command.
+
 -- py UiServer.py
+
 this will open a browser in localhost - http://127.0.0.1:5000/
    
 # Result
 Images before and after disaster can be added using the option given in the UI and click on "Process" button.
 On clicking "Process" it will take you to the page with following results:
 
-  Input images  - images provided by the user which is before and after the disaster
-    . Some sample images are present in the images folder for use
+  Input images  - images provided by the user which is before and after the disaster. Some sample images are present in the images folder for use
     
   Enhanced images - these are the images shown after applying the Contrast limited adaptive histogram equalization(CLAHE)
   
