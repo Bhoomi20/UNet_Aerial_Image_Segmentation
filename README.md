@@ -9,7 +9,7 @@ The code is integrated with the UI in UiServer.py file
 # Execution
 Open python executable terminal and then execute the below command.
 
--- pip install library-requirement.txt
+-- pip install -r library-requirement.txt
 
 -- py UiServer.py
 
